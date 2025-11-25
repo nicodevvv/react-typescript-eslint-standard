@@ -30,8 +30,15 @@ export default defineConfig([
       reactRefresh.configs.vite,
     ],
     languageOptions: {
+      parser: tseslint.parser,
       ecmaVersion: 2020,
+      sourceType: "module",
       globals: globals.browser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
     rules: {
       "@typescript-eslint/explicit-function-return-type": "warn",

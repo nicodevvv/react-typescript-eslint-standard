@@ -30,8 +30,15 @@ echo       reactHooks.configs.flat.recommended,
 echo       reactRefresh.configs.vite,
 echo     ],
 echo     languageOptions: {
-echo       ecmaVersion: 2020,
-echo       globals: globals.browser,
+echo        parser: tseslint.parser,
+echo        ecmaVersion: 2020,
+echo        sourceType: "module",
+echo        globals: globals.browser,
+echo        parserOptions: {
+echo            ecmaFeatures: {
+echo            jsx: true,
+echo            },
+echo        },
 echo     },
 echo     rules: {
 echo       "@typescript-eslint/explicit-function-return-type": "warn",
